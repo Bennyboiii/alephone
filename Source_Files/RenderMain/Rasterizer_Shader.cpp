@@ -75,7 +75,7 @@ void Rasterizer_Shader_Class::SetView(view_data& view) {
 	xtan *= view.real_world_to_screen_x / double(view.world_to_screen_x);
 
 	double yaw = view.virtual_yaw * FixedAngleToDegrees;
-	double pitch = view.virtual_pitch * FixedAngleToDegrees;
+	double pitch = view.virtual_pitch * FixedAngleToDegrees * 3;
 	pitch = (pitch > 180.0 ? pitch - 360.0 : pitch);
 	
 	glMatrixMode(GL_PROJECTION);
