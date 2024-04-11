@@ -172,7 +172,7 @@ void RenderRasterize_Shader::render_tree() {
 	}
 
 	const float virtual_yaw = view->virtual_yaw * FixedAngleToRadians;
-	const float virtual_pitch = view->virtual_pitch * FixedAngleToRadians;
+	const float virtual_pitch = view->virtual_pitch * FixedAngleToRadians * 3;
 
 	Shader* landscape_shaders[] = {
 		Shader::get(Shader::S_Landscape),
